@@ -1,8 +1,63 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Mountain, Calendar, FileText } from "lucide-react";
-import AIResearchDigest from "@/components/AIResearchDigest";
+import { ArrowDown, Mountain, Calendar, FileText, Download } from "lucide-react";
+import { useState } from "react";
 const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handlePDFDownload = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      alert("Please enter your email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Send email to Google Sheets via Google Apps Script Web App
+      const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL ||
+        "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+
+      // Submit email to Google Sheets
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          timestamp: new Date().toISOString(),
+          source: 'Zenvi Labs Website - Hero PDF Download'
+        })
+      });
+
+      // Local PDF file
+      const pdfUrl = "/assets/ZenviLabs-es-Sept.pdf";
+
+      // Trigger PDF download from local file
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.target = "_blank";
+      link.download = "ZenviLabs-es-Sept.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setIsSubmitted(true);
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      alert("There was an error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const scrollToSection = (sectionId: string) => {
     // Use the same mobile detection logic as Index component
     const viewportWidth = window.innerWidth;
@@ -47,51 +102,248 @@ const Hero = () => {
   return <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/6069157c-16af-41e6-a698-637aa684d8eb.png')`
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/public/assets/sea-website.png')`
     }} />
-      
+
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto space-y-4 md:space-y-8">
-          
-          {/* AI Research Digest */}
-          <div className="mb-6">
-            <AIResearchDigest />
-          </div>
-          
-          <div className="space-y-3 md:space-y-4">
-            
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Passionate end-to-end data professional, delivering ML and AI solutions that scale. 
-              Bringing precision and innovation to complex technical challenges.
-            </p>
+      <div className="relative z-10 container mx-auto px-4 text-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile Layout - Stack vertically */}
+          <div className="block lg:hidden text-center space-y-8 md:space-y-10">
+            <div className="space-y-4 md:space-y-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="text-[hsl(var(--zenvi-orange))]">Zenvi Labs</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+                Harnessing the power of AI. We help companies rapidly prototype, test, and deploy
+                AI-powered tools — from internal automation to customer-facing solutions — with
+                a focus on speed, impact, and product thinking.
+              </p>
+            </div>
+
+            {/* PDF Download Section - Mobile */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-strong">
+              <div className="text-center space-y-4">
+                <div className="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong">
+                  <FileText className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Download Our Company Overview
+                  </h3>
+                  <p className="text-sm text-white/80 mb-4">
+                    Get detailed insights into our AI solutions and approach.
+                  </p>
+                </div>
+
+                {isSubmitted ? (
+                  <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-4 text-center backdrop-blur-sm">
+                    <div className="w-8 h-8 mx-auto rounded-full bg-green-400/20 flex items-center justify-center mb-2">
+                      <Download className="h-4 w-4 text-green-400" />
+                    </div>
+                    <h4 className="text-sm font-semibold text-green-400 mb-1">Download Started!</h4>
+                    <p className="text-xs text-green-300">Check your downloads folder.</p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-2 bg-white/10 border-white/30 text-white hover:bg-white/20 text-xs"
+                      onClick={() => setIsSubmitted(false)}
+                    >
+                      Download Another Copy
+                    </Button>
+                  </div>
+                ) : (
+                  <form onSubmit={handlePDFDownload} className="space-y-3">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email address"
+                      required
+                      className="w-full px-4 py-3 border border-white/30 rounded-lg text-foreground bg-white/90 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
+                    />
+                    <Button
+                      type="submit"
+                      variant="accent"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-accent text-white hover:bg-accent/90 px-6 py-3"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="animate-spin mr-2">⏳</span>
+                          Processing...
+                        </>
+                      ) : (
+                        <>
+                          <Download className="h-5 w-5 mr-2" />
+                          Download PDF
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                )}
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button variant="accent" size="lg" onClick={() => scrollToSection("experience")} className="shadow-strong text-lg px-8 py-4">
+                <FileText className="h-6 w-6" />
+                View Our Work
+              </Button>
+              <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm text-lg px-8 py-4" onClick={() => scrollToSection("contact")}>
+                <Calendar className="h-6 w-6" />
+                Let's Chat
+              </Button>
+            </div>
+
+            <div className="flex justify-center">
+              <a
+                href="https://www.linkedin.com/company/zenvi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col justify-center items-center p-3 text-center text-white bg-[#0A66C2] w-[220px] h-10 rounded-2xl font-medium text-base hover:bg-[#004182] transition-colors shadow-medium"
+              >
+                Follow on LinkedIn
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="accent" size="lg" onClick={() => {console.log('Button clicked!'); scrollToSection("experience");}} className="shadow-strong">
-              <FileText className="h-5 w-5" />
-              View My Work
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm" onClick={() => scrollToSection("contact")}>
-              <Calendar className="h-5 w-5" />
-              Let's Chat
-            </Button>
-          </div>
+          {/* Desktop Layout - 2 Columns */}
+          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20 lg:items-center lg:min-h-[70vh]">
+            {/* Left Column - Main Content */}
+            <div className="space-y-8 xl:space-y-10">
+              <div className="space-y-6 xl:space-y-8">
+                <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight">
+                  <span className="text-[hsl(var(--zenvi-orange))] text-shadow-lg" style={{
+                    textShadow: '0 4px 8px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(255, 255, 255, 0.6)'
+                  }}>Zenvi Labs</span>
+                </h1>
+                <p className="text-2xl xl:text-3xl 2xl:text-4xl text-white/90 leading-relaxed">
+                  Harnessing the power of AI. We help companies rapidly prototype, test, and deploy
+                  AI-powered tools — from internal automation to customer-facing solutions — with
+                  a focus on speed, impact, and product thinking.
+                </p>
+              </div>
 
-          {/* LinkedIn Follow Button */}
-          <div className="flex justify-center mt-4 md:mt-6">
-            <a
-              href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giovanni-doni"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col justify-center items-center p-2 text-center text-white bg-[#0A66C2] w-[200px] h-8 rounded-2xl font-medium text-sm hover:bg-[#004182] transition-colors shadow-medium"
-            >
-              Follow on LinkedIn
-            </a>
-          </div>
+              <div className="flex justify-start">
+                <a
+                  href="https://www.linkedin.com/company/zenvi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col justify-center items-center p-3 text-center text-white bg-[#0A66C2] w-[240px] h-12 rounded-2xl font-medium text-lg hover:bg-[#004182] transition-colors shadow-medium"
+                >
+                  Follow on LinkedIn
+                </a>
+              </div>
+            </div>
 
+            {/* Right Column - Call to Action */}
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 xl:p-12 border border-white/20 shadow-strong">
+              <div className="text-center space-y-8">
+                <div className="w-20 h-20 xl:w-24 xl:h-24 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-accent-foreground flex items-center justify-center shadow-strong">
+                  <Calendar className="h-10 w-10 xl:h-12 xl:w-12" />
+                </div>
+
+                <div>
+                  <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-6 leading-tight">
+                    Let's Build Something{" "}
+                    <span className="text-[hsl(var(--zenvi-orange))]">Amazing Together</span>
+                  </h2>
+                  <p className="text-xl xl:text-2xl text-white/80 mb-8 leading-relaxed">
+                    Whether you're looking to rapidly prototype AI solutions, scale your ML initiatives,
+                    or build production-grade AI products, our team is ready to help.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm text-xl px-8 py-6"
+                    onClick={() => scrollToSection("contact")}
+                  >
+                    <Calendar className="h-6 w-6 mr-3" />
+                    Let's Discuss Your Project
+                  </Button>
+
+                  {/* PDF Download Section - Desktop */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <div className="text-center space-y-4">
+                      <div className="w-10 h-10 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white mb-2">
+                          Download Company Overview
+                        </h3>
+                        <p className="text-sm text-white/70 mb-4">
+                          Get insights into our AI solutions and approach.
+                        </p>
+                      </div>
+
+                      {isSubmitted ? (
+                        <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-4 text-center backdrop-blur-sm">
+                          <div className="w-6 h-6 mx-auto rounded-full bg-green-400/20 flex items-center justify-center mb-2">
+                            <Download className="h-3 w-3 text-green-400" />
+                          </div>
+                          <h4 className="text-sm font-semibold text-green-400 mb-1">Download Started!</h4>
+                          <p className="text-xs text-green-300">Check your downloads folder.</p>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="mt-2 bg-white/10 border-white/30 text-white hover:bg-white/20 text-xs"
+                            onClick={() => setIsSubmitted(false)}
+                          >
+                            Download Another Copy
+                          </Button>
+                        </div>
+                      ) : (
+                        <form onSubmit={handlePDFDownload} className="space-y-3">
+                          <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Enter your email address"
+                            required
+                            className="w-full px-3 py-2 border border-white/30 rounded-lg text-foreground bg-white/90 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all text-sm"
+                          />
+                          <Button
+                            type="submit"
+                            variant="accent"
+                            size="sm"
+                            disabled={isSubmitting}
+                            className="w-full bg-accent text-white hover:bg-accent/90 px-4 py-2 text-sm"
+                          >
+                            {isSubmitting ? (
+                              <>
+                                <span className="animate-spin mr-2">⏳</span>
+                                Processing...
+                              </>
+                            ) : (
+                              <>
+                                <Download className="h-4 w-4 mr-2" />
+                                Download PDF
+                              </>
+                            )}
+                          </Button>
+                        </form>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-4 text-base xl:text-lg text-white/60">
+                    <span>Madrid & London</span>
+                    <span>•</span>
+                    <span>EU Timezone</span>
+                    <span>•</span>
+                    <span>AI-first solutions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>;
 };

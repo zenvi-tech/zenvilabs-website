@@ -76,7 +76,8 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-mountain': 'var(--gradient-mountain)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-alt': 'var(--gradient-alt)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

@@ -3,62 +3,17 @@
   <channel>
     <title>Giovanni Doni - Blog, LinkedIn &amp; AI Research</title>
     <description>Latest blog posts, LinkedIn updates, and AI research highlights</description>
-    <link>https://giovanni-doni.github.io/</link>
+    <link>https://zenvilabs.github.io/</link>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Aug 2025 11:01:53 GMT</lastBuildDate>
-    <atom:link href="https://giovanni-doni.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 12:04:00 GMT</lastBuildDate>
+    <atom:link href="https://zenvilabs.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LinkedIn Post #1</title>
       <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7355928384205422592?collapsed=1" height="566" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-1</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-1</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
-      <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>LinkedIn Post #2</title>
-      <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7355637024210530304" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-2</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-2</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
-      <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>LinkedIn Post #3</title>
-      <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7354061415579561985?collapsed=1" height="569" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-3</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-3</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
-      <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>LinkedIn Post #4</title>
-      <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7339301481948311552?collapsed=1" height="552" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-4</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-4</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
-      <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>LinkedIn Post #5</title>
-      <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7339579159720910848?collapsed=1" height="583" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-5</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-5</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
-      <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>LinkedIn Post #6</title>
-      <description><![CDATA[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7338097403826196481?collapsed=1" height="662" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>]]></description>
-      <link>https://giovanni-doni.github.io/#linkedin-post-6</link>
-      <guid>https://giovanni-doni.github.io/#linkedin-post-6</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
+      <link>https://zenvilabs.github.io/#linkedin-post-1</link>
+      <guid>https://zenvilabs.github.io/#linkedin-post-1</guid>
+      <pubDate>Mon, 15 Sep 2025 12:04:00 GMT</pubDate>
       <category>LinkedIn</category>
       <author>Giovanni Doni</author>
     </item>
@@ -67,7 +22,7 @@
       <description><![CDATA[This article presents a significant advancement in medical AI, offering potential improvements in healthcare delivery and personalized treatment.]]></description>
       <link>https://arxiv.org/abs/2508.06186</link>
       <guid>ai-research-0</guid>
-      <pubDate>Tue, 12 Aug 2025 11:01:53 GMT</pubDate>
+      <pubDate>Mon, 15 Sep 2025 12:04:00 GMT</pubDate>
       <category>AI Research, Machine Learning</category>
       <author>Giovanni Doni</author>
     </item>
@@ -76,7 +31,7 @@
       <description><![CDATA[The integration of LLMs in power grid management highlights the potential for AI to improve critical infrastructure efficiency and reliability.]]></description>
       <link>https://arxiv.org/abs/2508.05702</link>
       <guid>ai-research-8</guid>
-      <pubDate>Mon, 11 Aug 2025 23:01:53 GMT</pubDate>
+      <pubDate>Mon, 15 Sep 2025 00:04:00 GMT</pubDate>
       <category>AI Research, Machine Learning</category>
       <author>Giovanni Doni</author>
     </item>
@@ -85,7 +40,7 @@
       <description><![CDATA[This research addresses a pressing societal issue, showcasing AI's role in enhancing online safety and moderation.]]></description>
       <link>https://arxiv.org/abs/2508.06360</link>
       <guid>ai-research-44</guid>
-      <pubDate>Mon, 11 Aug 2025 11:01:53 GMT</pubDate>
+      <pubDate>Sun, 14 Sep 2025 12:04:00 GMT</pubDate>
       <category>AI Research, Machine Learning</category>
       <author>Giovanni Doni</author>
     </item>
@@ -95,7 +50,7 @@
 
 ## A pragmatic, modular AI stack—smaller models, privacy-safe orchestration, and control without a monolith.
 
-![Image](/lovable-uploads/monolith_16x9_top_1920x1080.jpg)
+![Image](/public/assets/monolith_16x9_top_1920x1080.jpg)
 
 Not long ago I was thinking that intelligence comes in different forms and sizes. You get a spectrum of intelligences that are often optimised for carrying out a specific set of tasks, often quite fruitful 🐝.
 
@@ -167,7 +122,7 @@ As an ML/AI practitioner, I’ve worked for the better part of the last 10 years
 
 With the advancements in AI over the past few years, we’re now witnessing the creation of entirely new products built around AI from the ground up. This marks a significant shift, clearly reflected in how companies are reorienting their investment focus - from profitability to growth - driven by AI’s tailwinds and promises. 
 
-![Image](/lovable-uploads/graph-statistics-survey.png)
+![Image](/public/assets/graph-statistics-survey.png)
 *source: https://www.bondcao.com/report/pdf/Trends_Artificial_Intelligence.pdf*
 
 How much of this investment will translate into real, incremental revenue is still to be seen.
@@ -200,7 +155,7 @@ Larger companies have likely been flexing their legal teams muscle to set up pro
 
 Solutions like these can satisfy specific needs, but the landscape is multifaceted. Much depends on the organisation's appetite for innovation, governance setup, and the specific regulatory frameworks involved - especially in sensitive fields like healthcare and finance.
 
-![Image](/lovable-uploads/chart.png)
+![Image](/public/assets/chart.png)
 
 What about smaller companies?
 
@@ -223,382 +178,10 @@ A privacy-safe, locally adapted stack combining:
 
 We don't need general artificial intelligence everywhere. What we need is an intelligence stack - where plenty of fruit comes just thanks to bees that pollinates with just 1 million neurons.
 ]]></description>
-      <link>https://giovanni-doni.github.io/blog/fitting-intelligence</link>
-      <guid>https://giovanni-doni.github.io/blog/fitting-intelligence</guid>
+      <link>https://zenvilabs.github.io/blog/fitting-intelligence</link>
+      <guid>https://zenvilabs.github.io/blog/fitting-intelligence</guid>
       <pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
       <category>SLMs, Agentic, Strategy</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>Scaling LLMs in Production: Lessons from Deliveroo</title>
-      <description><![CDATA[# Scaling LLMs in Production: Lessons from Deliveroo
-
-## The Challenge of Scale
-
-When we first started experimenting with large language models at Deliveroo, we quickly realized that the jump from prototype to production is significant. What works for a few hundred requests per day doesn't necessarily work for thousands or millions.
-
-The main challenges we encountered were:
-- **Latency requirements**: Our users expect fast responses, but LLMs can be slow
-- **Cost optimization**: Model inference can get expensive at scale
-- **Reliability**: We needed consistent performance even during peak hours
-- **Model drift**: Ensuring model performance doesn't degrade over time
-
-## Infrastructure Considerations
-
-### Model Serving Architecture
-
-We experimented with several approaches before settling on our current architecture:
-
-1. **Direct API calls**: Initially, we used third-party APIs directly from our application servers
-2. **Caching layer**: We added Redis caching for common queries
-3. **Model gateway**: Finally, we built a dedicated service to handle all ML model interactions
-
-The model gateway approach gave us several advantages:
-- Centralized monitoring and logging
-- Easy A/B testing of different models
-- Better cost tracking and optimization
-- Simplified fallback mechanisms
-
-### Monitoring and Observability
-
-Monitoring LLMs in production requires different metrics than traditional services:
-- **Token usage**: Critical for cost management
-- **Response quality**: Using automated evaluation metrics
-- **User satisfaction**: Tracking user feedback and engagement
-- **Model performance**: Latency, throughput, and error rates
-
-## Lessons Learned
-
-### 1. Start Simple
-
-Our first production deployment was overly complex. We tried to optimize everything from day one, which led to unnecessary complexity and bugs. Starting with a simple setup and iterating based on real usage patterns proved much more effective.
-
-### 2. Invest in Evaluation
-
-Building robust evaluation pipelines early is crucial. We learned this the hard way when a model update degraded performance for specific use cases that we hadn't properly tested.
-
-### 3. Cost Monitoring is Essential
-
-LLM costs can spiral quickly. We built detailed cost tracking into our system from the beginning, which helped us identify optimization opportunities and make informed decisions about model selection.
-
-### 4. Plan for Failures
-
-LLMs can fail in unexpected ways. Having proper fallback mechanisms and graceful degradation strategies is essential for maintaining service reliability.
-
-## Looking Forward
-
-As the LLM landscape continues to evolve rapidly, we're focusing on:
-- **Multi-model strategies**: Using different models for different tasks
-- **Edge deployment**: Moving some models closer to users for better latency
-- **Fine-tuning**: Customizing models for our specific use cases
-- **Cost optimization**: Continuously improving our cost per request
-
-The key to success with LLMs in production is treating them as part of a larger system, not as magic solutions. Proper engineering practices, monitoring, and gradual rollouts are just as important as choosing the right model.]]></description>
-      <link>https://giovanni-doni.github.io/blog/scaling-llms-production-deliveroo</link>
-      <guid>https://giovanni-doni.github.io/blog/scaling-llms-production-deliveroo</guid>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
-      <category>LLMs, Production, MLOps</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>From the Dolomites to Data: What Mountains Teach Us About ML</title>
-      <description><![CDATA[# From the Dolomites to Data: What Mountains Teach Us About ML
-
-## The Summit Mindset
-
-Standing at the base of a towering peak in the Dolomites, you're faced with a challenge that seems impossible. The summit is hidden by clouds, the path is unclear, and every step requires careful consideration. This feeling is remarkably similar to starting a complex machine learning project.
-
-## Lesson 1: Respect the Preparation
-
-In mountaineering, the most dangerous climbers are often those who underestimate the preparation required. They skip route planning, ignore weather forecasts, or bring inadequate gear. In machine learning, I've seen similar patterns:
-
-- **Data exploration shortcuts**: Jumping into modeling without understanding your data
-- **Infrastructure neglect**: Building models without considering deployment constraints
-- **Validation oversights**: Not setting up proper testing frameworks from the start
-
-Just as you wouldn't attempt a difficult climb without studying the route, don't start an ML project without thoroughly understanding your data landscape.
-
-## Lesson 2: One Step at a Time
-
-The most intimidating aspect of both mountain climbing and ML projects is the sheer scale of the challenge ahead. The secret is to focus on the next step, not the entire journey.
-
-In the mountains, this means:
-- Focus on reaching the next waypoint, not the summit
-- Check your progress regularly
-- Adjust your route based on current conditions
-
-In ML, this translates to:
-- Break projects into small, measurable milestones
-- Iterate quickly and validate assumptions early
-- Be prepared to pivot based on what you learn
-
-## Lesson 3: Know When to Turn Back
-
-Some of my most valuable mountain experiences have been the climbs where I turned back. A sudden weather change, unexpected difficulty, or equipment failure can make continuing dangerous. The mountain will be there tomorrow.
-
-In machine learning:
-- Not every approach will work, and that's okay
-- Sometimes the data isn't ready for the problem you're trying to solve
-- Technical debt can make continuing more dangerous than starting fresh
-
-The ability to recognize when to stop, reassess, and potentially start over is crucial for long-term success.
-
-## Lesson 4: The Importance of Base Camp
-
-Every serious mountain expedition relies on well-established base camps. These are safe spaces where you can rest, resupply, and plan your next move. In ML, your "base camp" is your infrastructure:
-
-- **Reliable data pipelines**: Your supply line to fresh, clean data
-- **Monitoring systems**: Your early warning system for problems
-- **Reproducible environments**: Your safety net for experiments
-
-Invest in building solid base camps before attempting the summit.
-
-## Lesson 5: Weather Changes Everything
-
-Mountain weather can change rapidly and dramatically. What started as a perfect climbing day can become dangerous within hours. Experienced mountaineers constantly monitor conditions and adapt their plans accordingly.
-
-In ML projects, your "weather" includes:
-- **Business requirements**: Shifting priorities and goals
-- **Data drift**: Changes in your input data over time
-- **Technical landscape**: New tools, frameworks, and best practices
-
-Stay flexible and be prepared to adapt your approach based on changing conditions.
-
-## The View from the Top
-
-When you finally reach a mountain summit, the view is spectacular. But the real reward isn't the view itself—it's the journey that got you there. The skills you developed, the confidence you gained, and the problems you solved along the way.
-
-The same is true for ML projects. The deployed model is just the summit. The real value lies in the data infrastructure you built, the domain knowledge you gained, and the processes you refined.
-
-## Back to Base Camp
-
-Every mountain climb ends with a descent back to base camp. This isn't the end of the adventure—it's preparation for the next one. You debrief what went well, what could be improved, and what you learned.
-
-Apply this same mindset to your ML projects:
-- Document what worked and what didn't
-- Share knowledge with your team
-- Identify areas for improvement in your next project
-
-The mountain will always be there, ready for your next attempt. And each climb makes you better prepared for the challenges ahead.]]></description>
-      <link>https://giovanni-doni.github.io/blog/dolomites-data-mountains-ml</link>
-      <guid>https://giovanni-doni.github.io/blog/dolomites-data-mountains-ml</guid>
-      <pubDate>Wed, 20 Dec 2023 00:00:00 GMT</pubDate>
-      <category>Career, Philosophy, Mountains</category>
-      <author>Giovanni Doni</author>
-    </item>
-    <item>
-      <title>Building Robust ML Pipelines with Kubernetes and Argo</title>
-      <description><![CDATA[# Building Robust ML Pipelines with Kubernetes and Argo
-
-## The Need for Orchestration
-
-Machine learning workflows are inherently complex. Unlike traditional software applications, ML pipelines involve multiple stages: data ingestion, preprocessing, feature engineering, model training, validation, and deployment. Each stage has different computational requirements, dependencies, and failure modes.
-
-As teams scale their ML operations, managing these workflows manually becomes unsustainable. This is where container orchestration tools like Kubernetes and workflow engines like Argo come into play.
-
-## Architecture Overview
-
-Our ML pipeline architecture consists of several key components:
-
-### 1. Kubernetes as the Foundation
-
-Kubernetes provides the underlying infrastructure for running containerized workloads. For ML pipelines, this offers several advantages:
-
-- **Resource isolation**: Each pipeline step runs in its own container with defined resource limits
-- **Scalability**: Automatic scaling based on workload demands
-- **Fault tolerance**: Automatic restart of failed containers
-- **Consistency**: Same runtime environment across development, staging, and production
-
-### 2. Argo Workflows for Orchestration
-
-Argo Workflows acts as our workflow engine, defining the execution graph of ML pipeline steps. Key benefits include:
-
-- **DAG-based workflows**: Define complex dependencies between pipeline steps
-- **Conditional execution**: Skip or repeat steps based on previous results
-- **Artifact management**: Seamless passing of data between workflow steps
-- **Version control**: Workflows are defined in YAML and can be version controlled
-
-### 3. Data and Model Storage
-
-We use a combination of:
-- **Object storage**: For large datasets and model artifacts
-- **Container registry**: For versioned container images
-- **Metadata store**: For tracking experiments and model versions
-
-## Implementation Deep Dive
-
-### Pipeline Definition
-
-Here's a simplified example of how we define an ML pipeline using Argo Workflows:
-
-```yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Workflow
-metadata:
-  generateName: ml-pipeline-
-spec:
-  entrypoint: ml-pipeline
-  templates:
-  - name: ml-pipeline
-    dag:
-      tasks:
-      - name: data-ingestion
-        template: data-ingestion-step
-      - name: preprocessing
-        template: preprocessing-step
-        dependencies: [data-ingestion]
-      - name: feature-engineering
-        template: feature-engineering-step
-        dependencies: [preprocessing]
-      - name: model-training
-        template: model-training-step
-        dependencies: [feature-engineering]
-      - name: model-validation
-        template: model-validation-step
-        dependencies: [model-training]
-      - name: model-deployment
-        template: model-deployment-step
-        dependencies: [model-validation]
-        when: "{{tasks.model-validation.outputs.parameters.accuracy}} > 0.85"
-```
-
-### Resource Management
-
-Each step in our pipeline can specify its resource requirements:
-
-```yaml
-- name: model-training-step
-  container:
-    image: ml-training:latest
-    resources:
-      requests:
-        memory: "8Gi"
-        cpu: "4"
-        nvidia.com/gpu: "1"
-      limits:
-        memory: "16Gi"
-        cpu: "8"
-        nvidia.com/gpu: "1"
-```
-
-This ensures that resource-intensive steps like model training get the resources they need without affecting other workloads.
-
-## Monitoring and Observability
-
-Effective monitoring is crucial for production ML pipelines. Our monitoring stack includes:
-
-### Pipeline Metrics
-
-- **Execution time**: Track how long each pipeline step takes
-- **Success rate**: Monitor pipeline failure rates and identify bottlenecks
-- **Resource utilization**: Ensure efficient use of computational resources
-- **Data quality**: Track data drift and quality metrics
-
-### Alerting
-
-We've set up alerts for:
-- Pipeline failures
-- Unusual execution times
-- Resource exhaustion
-- Data quality issues
-
-### Logging
-
-Centralized logging helps with debugging failed pipeline runs. We use structured logging to make it easy to correlate logs across different pipeline steps.
-
-## Best Practices We've Learned
-
-### 1. Design for Failure
-
-ML pipelines will fail. Design your workflows to handle failures gracefully:
-- Use retry policies for transient failures
-- Implement circuit breakers for external dependencies
-- Store intermediate results to avoid recomputing expensive steps
-- Have clear rollback procedures
-
-### 2. Version Everything
-
-Version control isn't just for code:
-- Container images should be tagged with semantic versions
-- Data should be versioned and immutable
-- Model artifacts should include metadata about training data and parameters
-- Pipeline definitions should be in version control
-
-### 3. Start Simple, Then Optimize
-
-Begin with a basic pipeline and add complexity gradually:
-- Start with sequential execution, then add parallelism where beneficial
-- Begin with basic monitoring, then add detailed observability
-- Use simple scheduling initially, then add complex triggers as needed
-
-### 4. Test at Multiple Levels
-
-Testing ML pipelines requires a multi-layered approach:
-- **Unit tests**: Test individual pipeline components
-- **Integration tests**: Test end-to-end pipeline execution
-- **Data tests**: Validate data quality and schema compliance
-- **Model tests**: Verify model performance meets requirements
-
-## Challenges and Solutions
-
-### Data Management
-
-Managing large datasets in Kubernetes can be challenging. We've addressed this through:
-- Using persistent volumes for data that needs to persist across pod restarts
-- Implementing data caching strategies to avoid redundant data transfers
-- Using streaming for real-time data processing
-
-### GPU Resource Management
-
-GPU resources are expensive and need careful management:
-- Implement resource quotas to prevent any single pipeline from monopolizing GPUs
-- Use node selectors to ensure GPU workloads run on appropriate nodes
-- Monitor GPU utilization to optimize resource allocation
-
-### Security
-
-ML pipelines often handle sensitive data:
-- Use Kubernetes secrets for storing credentials
-- Implement network policies to restrict pod-to-pod communication
-- Regular security scanning of container images
-- Data encryption in transit and at rest
-
-## Looking Forward
-
-As our ML operations continue to mature, we're exploring:
-
-### Multi-Cloud Deployments
-
-Using tools like Admiralty to distribute workloads across multiple cloud providers for:
-- Cost optimization
-- Improved fault tolerance
-- Regulatory compliance
-
-### GitOps for ML
-
-Implementing GitOps practices for ML pipeline deployment:
-- Pipeline definitions stored in Git
-- Automatic deployment of pipeline changes
-- Easy rollback capabilities
-
-### Advanced Orchestration
-
-Exploring more sophisticated orchestration patterns:
-- Event-driven pipelines that trigger based on data availability
-- Conditional workflows that adapt based on model performance
-- Cross-pipeline dependencies for complex ML workflows
-
-## Conclusion
-
-Building robust ML pipelines requires more than just good algorithms—it requires solid engineering practices and the right infrastructure. Kubernetes and Argo provide a powerful foundation for scalable, reliable ML operations.
-
-The key is to start simple and iterate. Focus on getting the basics right: version control, monitoring, and failure handling. As your needs grow, you can add more sophisticated features and optimizations.
-
-Remember that the goal isn't to build the most complex system possible, but to build a system that reliably delivers value to your users while being maintainable by your team.]]></description>
-      <link>https://giovanni-doni.github.io/blog/robust-ml-pipelines-kubernetes-argo</link>
-      <guid>https://giovanni-doni.github.io/blog/robust-ml-pipelines-kubernetes-argo</guid>
-      <pubDate>Tue, 28 Nov 2023 00:00:00 GMT</pubDate>
-      <category>Kubernetes, MLOps, Infrastructure</category>
       <author>Giovanni Doni</author>
     </item>
   </channel>

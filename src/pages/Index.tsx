@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Team from "@/components/Team";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -104,6 +105,7 @@ const Index = () => {
         <Hero />
         <About />
         <Experience />
+        <Team />
         <Blog />
         <Contact />
         <Footer />
@@ -122,7 +124,7 @@ const Index = () => {
             <AccordionTrigger className="px-4 py-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
               <div className="flex items-center gap-3">
                 <User className="h-5 w-5 text-accent" />
-                <span className="text-lg font-semibold">About Me</span>
+                <span className="text-lg font-semibold">About</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="pb-0">
@@ -142,7 +144,7 @@ const Index = () => {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="blog" className="border-b border-border/50">
+          <AccordionItem value="blog" className="border-b border-border/50 hidden">
             <AccordionTrigger className="px-4 py-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
               <div className="flex items-center gap-3">
                 <FileText className="h-5 w-5 text-accent" />
@@ -151,6 +153,18 @@ const Index = () => {
             </AccordionTrigger>
             <AccordionContent className="pb-0">
               <Blog />
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="team" className="border-b border-border/50">
+            <AccordionTrigger className="px-4 py-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+              <div className="flex items-center gap-3">
+                <User className="h-5 w-5 text-accent" />
+                <span className="text-lg font-semibold">Our Team</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="pb-0">
+              <Team />
             </AccordionContent>
           </AccordionItem>
 

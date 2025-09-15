@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Mountain, Linkedin, Mail } from "lucide-react";
+import { Menu, X, Mountain, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +64,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Mountain className="h-8 w-8 text-accent" />
-            <span className="text-xl font-bold text-foreground">Giovanni Doni</span>
+            <img
+              src="/assets/favicon.png"
+              alt="Zenvi Labs Logo"
+              className="h-8 w-8 rounded object-contain"
+            />
+            <span className="text-xl font-bold text-foreground">Zenvi Labs</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -83,10 +87,10 @@ const Header = () => {
               Experience
             </button>
             <button
-              onClick={() => scrollToSection("blog")}
+              onClick={() => scrollToSection("team")}
               className="text-foreground hover:text-accent transition-colors"
             >
-              Blog
+              Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -94,6 +98,14 @@ const Header = () => {
             >
               Contact
             </button>
+            <a
+              href="https://zenvi.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-accent transition-colors font-medium border-l border-border/30 pl-8 ml-4"
+            >
+              Energy Tool
+            </a>
             <div className="flex items-center space-x-2">
               <Button
                 variant="ghost"
@@ -141,10 +153,10 @@ const Header = () => {
                 Experience
               </button>
               <button
-                onClick={() => scrollToSection("blog")}
+                onClick={() => scrollToSection("team")}
                 className="text-left text-foreground hover:text-accent transition-colors"
               >
-                Blog
+                Team
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -152,6 +164,17 @@ const Header = () => {
               >
                 Contact
               </button>
+              <div className="border-t border-border/30 pt-4 mt-4">
+                <a
+                  href="https://zenvi.es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-left text-foreground hover:text-accent transition-colors font-medium flex items-center gap-2"
+                >
+                  Energy Tool
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
               <div className="flex items-center space-x-2 pt-2">
                 <Button
                   variant="ghost"

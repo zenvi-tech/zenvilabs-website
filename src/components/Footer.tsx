@@ -13,7 +13,6 @@ const Footer = () => {
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
-    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -46,21 +45,23 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center space-x-2">
-                <Mountain className="h-8 w-8 text-accent" />
-                <span className="text-2xl font-bold">Giovanni Doni</span>
+                <div className="h-8 w-8 rounded bg-[hsl(var(--zenvi-orange))] flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">ZL</span>
+                </div>
+                <span className="text-2xl font-bold">Zenvi Labs</span>
               </div>
               <p className="text-white/80 max-w-md">
-                Senior ML and AI Engineer bridging the precision of Alpine adventures with 
-                the innovation of machine learning. Building scalable solutions that matter.
+                AI consultancy helping companies rapidly prototype, test, and deploy AI-powered tools.
+                Building production-grade AI products with a focus on speed, impact, and product thinking.
               </p>
               <div className="flex items-center gap-2">
                 <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                   <Mountain className="h-3 w-3 mr-1" />
-                  London-based
+                  Madrid & London
                 </Badge>
                 <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                   <Code className="h-3 w-3 mr-1" />
-                  ML and AI Engineer
+                  AI Consultancy
                 </Badge>
               </div>
             </div>
@@ -78,6 +79,12 @@ const Footer = () => {
                     {link.name}
                   </button>
                 ))}
+                <button
+                  onClick={() => scrollToSection("#team")}
+                  className="block text-white/80 hover:text-accent transition-colors"
+                >
+                  Team
+                </button>
               </nav>
             </div>
 
@@ -111,12 +118,12 @@ const Footer = () => {
                 {/* LinkedIn Follow Button */}
                 <div className="pt-2">
                   <a
-                    href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giovanni-doni"
+                    href="https://www.linkedin.com/company/zenvi-labs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-center text-white bg-[#0A66C2] w-[200px] h-10 leading-10 rounded-2xl font-medium text-sm hover:bg-[#004182] transition-colors"
                   >
-                    Follow on LinkedIn
+                    Follow Zenvi Labs
                   </a>
                 </div>
               </div>
@@ -127,22 +134,22 @@ const Footer = () => {
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col items-center justify-between gap-4">
               <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-white/60 text-sm text-center">
-                <span>© {currentYear} Giovanni Doni.</span>
+                <span>© {currentYear} Zenvi Labs.</span>
                 <div className="flex items-center gap-1">
                   <span>Built with</span>
                   <Heart className="h-4 w-4 text-red-400" />
-                  <span>and React in London</span>
+                  <span>and React in Madrid & London</span>
                 </div>
               </div>
-              
+
               <div className="flex flex-row items-center gap-6 text-sm text-white/60 text-center">
-                <span>Hosted on GitHub Pages</span>
+                <span>AI-powered solutions</span>
                 <span>•</span>
                 <a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
               </div>
-              
+
               <p className="text-white/60 text-sm italic text-center">
-                "There is plenty of room at the top."
+                "Harnessing the power of AI."
               </p>
             </div>
           </div>

@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '30 12 * * *'  # Every day at 12:30 PM UTC
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Generate RSS feeds
+      run: node scripts/generate-rss.js
+      
+    - name: Build
+      run: npm run build
+      env:
+        VITE_CALENDLY_URL: ${{ vars.VITE_CALENDLY_URL }}
+        VITE_EMAIL: ${{ vars.VITE_EMAIL }}
+        VITE_LINKEDIN_URL: ${{ vars.VITE_LINKEDIN_URL }}
+        VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
+
+
+    - name: Add .nojekyll file
+      run: touch dist/.nojekyll
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist

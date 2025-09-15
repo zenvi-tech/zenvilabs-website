@@ -7,19 +7,6 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import blogArticles from '@/data/blog-articles.json';
 
-// Import markdown files directly
-import scalingLlmsContent from '@/data/blog-posts/scaling-llms-production-deliveroo.md?raw';
-import dolomitesContent from '@/data/blog-posts/dolomites-data-mountains-ml.md?raw';
-import kubernetesContent from '@/data/blog-posts/robust-ml-pipelines-kubernetes-argo.md?raw';
-import fittingIntelligenceContent from '@/data/blog-posts/fitting-intelligence.md?raw';
-
-// Create a mapping of content files to their imported content
-const contentMap: Record<string, string> = {
-  'scaling-llms-production-deliveroo.md': scalingLlmsContent,
-  'dolomites-data-mountains-ml.md': dolomitesContent,
-  'robust-ml-pipelines-kubernetes-argo.md': kubernetesContent,
-  'fitting-intelligence.md': fittingIntelligenceContent,
-};
 
 interface BlogArticle {
   title: string;
@@ -39,18 +26,23 @@ const BlogPost = () => {
 
   useEffect(() => {
     const foundArticle = blogArticles.find((article: BlogArticle) => article.slug === slug);
-    
+
     if (foundArticle) {
       setArticle(foundArticle);
-      
-      // Get markdown content from static imports
-      const markdownContent = contentMap[foundArticle.contentFile];
-      if (markdownContent) {
-        setContent(markdownContent);
-      } else {
-        console.error('Markdown content not found for:', foundArticle.contentFile);
-      }
-      setLoading(false);
+
+      // Load markdown content dynamically using dynamic imports
+      const loadMarkdownContent = async () => {
+        try {
+          const module = await import(`../../data/blog-posts/${foundArticle.contentFile}?raw`);
+          setContent(module.default);
+        } catch (error) {
+          console.error('Error loading markdown content:', error);
+          setContent('Error loading content.');
+        }
+        setLoading(false);
+      };
+
+      loadMarkdownContent();
     } else {
       setLoading(false);
     }
