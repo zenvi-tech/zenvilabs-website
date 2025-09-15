@@ -30,11 +30,16 @@ const BlogPost = () => {
     if (foundArticle) {
       setArticle(foundArticle);
 
-      // Load markdown content dynamically using dynamic imports
+      // Load markdown content dynamically using fetch
       const loadMarkdownContent = async () => {
         try {
-          const module = await import(`../../data/blog-posts/${foundArticle.contentFile}?raw`);
-          setContent(module.default);
+          const response = await fetch(`/blog-posts/${foundArticle.contentFile}`);
+          if (response.ok) {
+            const content = await response.text();
+            setContent(content);
+          } else {
+            throw new Error('Failed to fetch content');
+          }
         } catch (error) {
           console.error('Error loading markdown content:', error);
           setContent('Error loading content.');
