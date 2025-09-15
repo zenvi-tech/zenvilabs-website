@@ -13,7 +13,7 @@ const Team = () => {
       description: "Previously VP at Arcano Capital, managing €2.4B in assets. Worked in M&A at Arcano and PwC, focusing on banking and insurance.",
       education: "Business Administration, Master's in Finance from IEB and LSE",
       companies: ["Arcano Capital", "PwC"],
-      image: "/assets/manu_website.png"
+      image: "assets/manu_website.png"
     },
     {
       name: "Pablo Portillo",
@@ -24,7 +24,7 @@ const Team = () => {
       description: "Previously at Bia Power (energy optimization for EV fleets), Deliveroo, and Glovo in food delivery sector.",
       education: "Mathematics and Computer Engineering from Universidad Politécnica de Madrid",
       companies: ["Bia Power", "Deliveroo", "Glovo"],
-      image: "/assets/pablo_website.png"
+      image: "assets/pablo_website.png"
     },
     {
       name: "Giovanni Doni, PhD",
@@ -35,7 +35,7 @@ const Team = () => {
       description: "Sr. ML Engineer at Deliveroo, leading language model deployment. Previously Sr. Data Scientist at Tesco and Research Collaborator.",
       education: "PhD in Computational Physics from King's College London, Materials Engineering degrees",
       companies: ["Deliveroo", "Tesco", "SUPSI"],
-      image: "/assets/giovanni_website.png"
+      image: "assets/giovanni_website.png"
     }
   ];
 

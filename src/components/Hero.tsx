@@ -7,11 +7,21 @@ const Hero = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handlePDFDownload = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
       alert("Please enter your email address");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address");
       return;
     }
 
@@ -37,7 +47,7 @@ const Hero = () => {
       });
 
       // Local PDF file
-      const pdfUrl = "/assets/ZenviLabs-es-Sept.pdf";
+      const pdfUrl = "assets/ZenviLabs-es-Sept.pdf";
 
       // Trigger PDF download from local file
       const link = document.createElement('a');
@@ -102,7 +112,7 @@ const Hero = () => {
   return <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/public/assets/sea-website.png')`
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('${import.meta.env.BASE_URL}assets/sea-website.png')`
     }} />
 
       {/* Content */}
@@ -215,8 +225,8 @@ const Hero = () => {
             <div className="space-y-8 xl:space-y-10">
               <div className="space-y-6 xl:space-y-8">
                 <h1 className="text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight">
-                  <span className="text-[hsl(var(--zenvi-orange))] text-shadow-lg" style={{
-                    textShadow: '0 4px 8px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(255, 255, 255, 0.6)'
+                  <span className="text-[hsl(var(--zenvi-orange))]" style={{
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.3)'
                   }}>Zenvi Labs</span>
                 </h1>
                 <p className="text-2xl xl:text-3xl 2xl:text-4xl text-white/90 leading-relaxed">
@@ -330,14 +340,6 @@ const Hero = () => {
                         </form>
                       )}
                     </div>
-                  </div>
-
-                  <div className="flex items-center justify-center gap-4 text-base xl:text-lg text-white/60">
-                    <span>Madrid & London</span>
-                    <span>•</span>
-                    <span>EU Timezone</span>
-                    <span>•</span>
-                    <span>AI-first solutions</span>
                   </div>
                 </div>
               </div>

@@ -10,11 +10,21 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handlePDFDownload = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
       alert("Please enter your email address");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address");
       return;
     }
 
@@ -40,7 +50,7 @@ const Contact = () => {
       });
 
       // Local PDF file
-      const pdfUrl = "/assets/ZenviLabs-es-Sept.pdf";
+      const pdfUrl = "assets/ZenviLabs-es-Sept.pdf";
 
       // Trigger PDF download from local file
       const link = document.createElement('a');

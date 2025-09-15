@@ -65,7 +65,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <img
-              src="/assets/favicon.png"
+              src="assets/favicon.png"
               alt="Zenvi Labs Logo"
               className="h-8 w-8 rounded object-contain"
             />
@@ -76,25 +76,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors font-semibold"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-foreground hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors font-semibold"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("team")}
-              className="text-foreground hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors font-semibold"
             >
               Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors font-semibold"
             >
               Contact
             </button>
@@ -102,7 +102,7 @@ const Header = () => {
               href="https://zenvi.es"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-accent transition-colors font-medium border-l border-border/30 pl-8 ml-4"
+              className="text-foreground hover:text-accent transition-colors font-medium"
             >
               Energy Tool
             </a>
@@ -115,9 +115,10 @@ const Header = () => {
                 <Linkedin className="h-4 w-4" />
               </Button>
               <Button
-                variant="accent"
+                variant="default"
                 size="sm"
                 asChild
+                className="bg-[hsl(var(--zenvi-orange))] hover:bg-[hsl(var(--zenvi-orange-active))] text-white"
               >
                 <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>
                   <Mail className="h-4 w-4" />
@@ -142,25 +143,25 @@ const Header = () => {
             <nav className="flex flex-col p-4 space-y-4">
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-left text-foreground hover:text-accent transition-colors"
+                className="text-left text-foreground hover:text-accent transition-colors font-semibold"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("experience")}
-                className="text-left text-foreground hover:text-accent transition-colors"
+                className="text-left text-foreground hover:text-accent transition-colors font-semibold"
               >
                 Experience
               </button>
               <button
                 onClick={() => scrollToSection("team")}
-                className="text-left text-foreground hover:text-accent transition-colors"
+                className="text-left text-foreground hover:text-accent transition-colors font-semibold"
               >
                 Team
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-left text-foreground hover:text-accent transition-colors"
+                className="text-left text-foreground hover:text-accent transition-colors font-semibold"
               >
                 Contact
               </button>
@@ -184,9 +185,10 @@ const Header = () => {
                   <Linkedin className="h-4 w-4" />
                 </Button>
                 <Button
-                  variant="accent"
+                  variant="default"
                   size="sm"
                   asChild
+                  className="bg-[hsl(var(--zenvi-orange))] hover:bg-[hsl(var(--zenvi-orange-active))] text-white"
                 >
                   <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>
                     <Mail className="h-4 w-4" />

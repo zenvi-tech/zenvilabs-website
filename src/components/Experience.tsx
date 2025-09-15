@@ -86,7 +86,7 @@ const Experience = () => {
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
               <Building2 className="h-4 w-4 mr-2" />
-              Experience
+              Core Expertise
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Our{" "}
