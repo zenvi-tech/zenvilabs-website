@@ -1,16 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Giovanni Doni - Blog</title>
-    <description>Latest blog posts on machine learning, AI, and technology</description>
-    <link>https://zenvilabs.github.io/</link>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 15 Sep 2025 16:51:04 GMT</lastBuildDate>
-    <atom:link href="https://zenvilabs.github.io/rss/blog.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Fitting intelligence</title>
-      <description><![CDATA[# Fitting intelligence
+# Fitting intelligence
 
 ## A pragmatic, modular AI stack—smaller models, privacy-safe orchestration, and control without a monolith.
 
@@ -141,12 +129,3 @@ A privacy-safe, locally adapted stack combining:
 - An orchestration layer to blend reasoning, retrieval, and human-in-the-loop
 
 We don't need general artificial intelligence everywhere. What we need is an intelligence stack - where plenty of fruit comes just thanks to bees that pollinates with just 1 million neurons.
-]]></description>
-      <link>https://zenvilabs.github.io/blog/fitting-intelligence</link>
-      <guid>https://zenvilabs.github.io/blog/fitting-intelligence</guid>
-      <pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
-      <category>SLMs, Agentic, Strategy</category>
-      <author>Giovanni Doni</author>
-    </item>
-  </channel>
-</rss>
