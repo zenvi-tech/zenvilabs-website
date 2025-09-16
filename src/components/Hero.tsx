@@ -125,9 +125,7 @@ const Hero = () => {
                 <span className="text-[hsl(var(--zenvi-orange))]">Zenvi Labs</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
-                Harnessing the power of AI. We help companies rapidly prototype, test, and deploy
-                AI-powered tools — from internal automation to customer-facing solutions — with
-                a focus on speed, impact, and product thinking.
+                Our Intelligence, your Energy. We shape your business automation needs into AI-powered solutions.
               </p>
             </div>
 
@@ -230,20 +228,26 @@ const Hero = () => {
                   }}>Zenvi Labs</span>
                 </h1>
                 <p className="text-2xl xl:text-3xl 2xl:text-4xl text-white/90 leading-relaxed">
-                  Harnessing the power of AI. We help companies rapidly prototype, test, and deploy
-                  AI-powered tools — from internal automation to customer-facing solutions — with
-                  a focus on speed, impact, and product thinking.
+                  Our Intelligence, your Energy. We shape your business automation needs into AI-powered solutions.
                 </p>
               </div>
 
-              <div className="flex justify-start">
+              <div className="flex flex-row gap-4 items-center">
+                <Button
+                  variant="accent"
+                  size="lg"
+                  onClick={() => window.open('https://zenvi.es', '_blank')}
+                  className="shadow-strong text-lg px-6 py-3"
+                >
+                  Our Energy Platform
+                </Button>
                 <a
                   href="https://www.linkedin.com/company/zenvi/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col justify-center items-center p-3 text-center text-white bg-[#0A66C2] w-[240px] h-12 rounded-2xl font-medium text-lg hover:bg-[#004182] transition-colors shadow-medium"
+                  className="flex justify-center items-center px-6 py-3 text-center text-white bg-[#0A66C2] rounded-2xl font-medium text-lg hover:bg-[#004182] transition-colors shadow-medium"
                 >
-                  Follow on LinkedIn
+                  Follow us on LinkedIn
                 </a>
               </div>
             </div>
@@ -251,31 +255,31 @@ const Hero = () => {
             {/* Right Column - Call to Action */}
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 xl:p-12 border border-white/20 shadow-strong">
               <div className="text-center space-y-8">
-                <div className="w-20 h-20 xl:w-24 xl:h-24 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-accent-foreground flex items-center justify-center shadow-strong">
-                  <Calendar className="h-10 w-10 xl:h-12 xl:w-12" />
-                </div>
-
                 <div>
-                  <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-6 leading-tight">
+                  <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-6 leading-tight">
                     Let's Build Something{" "}
                     <span className="text-[hsl(var(--zenvi-orange))]">Amazing Together</span>
                   </h2>
-                  <p className="text-xl xl:text-2xl text-white/80 mb-8 leading-relaxed">
+                  <p className="text-lg xl:text-xl text-white/80 mb-8 leading-relaxed">
                     Whether you're looking to rapidly prototype AI solutions, scale your ML initiatives,
                     or build production-grade AI products, our team is ready to help.
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="w-full bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm text-xl px-8 py-6"
+                  <div
+                    className="flex items-center justify-center gap-4 cursor-pointer group w-full"
                     onClick={() => scrollToSection("contact")}
                   >
-                    <Calendar className="h-6 w-6 mr-3" />
-                    Let's Discuss Your Project
-                  </Button>
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
+                      <Calendar className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
+                        Let's Speak
+                      </p>
+                    </div>
+                  </div>
 
                   {/* PDF Download Section - Desktop */}
                   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">

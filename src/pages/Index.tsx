@@ -172,7 +172,7 @@ const Index = () => {
             <AccordionTrigger className="px-4 py-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
               <div className="flex items-center gap-3">
                 <ChevronDown className="h-5 w-5 text-accent" />
-                <span className="text-lg font-semibold">Let's Build Something Amazing Together</span>
+                <span className="text-base font-semibold">Let's Discuss Your AI Needs</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="pb-0">

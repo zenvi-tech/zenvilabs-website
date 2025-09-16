@@ -10,7 +10,7 @@ const Team = () => {
       email: "manuel@zenvi.es",
       experience: "7+ years",
       background: "Banking and investment funds",
-      description: "Previously VP at Arcano Capital, managing €2.4B in assets. Worked in M&A at Arcano and PwC, focusing on banking and insurance.",
+      description: "Previously VP at Arcano Capital (€2.4B investment fund). Worked in M&A at Arcano and PwC, focusing on banking and insurance.",
       education: "Business Administration, Master's in Finance from IEB and LSE",
       companies: ["Arcano Capital", "PwC"],
       image: "assets/manu_website.png"

@@ -105,9 +105,9 @@ const Contact = () => {
               Get in Touch
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-center">
-              Let's Build Something{" "}
+              Let's Discuss Your{" "}
               <span className="text-[hsl(var(--zenvi-orange))]">
-                Amazing Together
+                AI Needs
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -119,51 +119,35 @@ const Contact = () => {
           {/* Combined Contact Section */}
           <div className="max-w-6xl mx-auto">
             <Card className="p-8 md:p-12 lg:p-16 bg-card border-border shadow-strong">
-              {/* Location Info Header */}
-              <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-10 md:mb-12 pb-8 md:pb-10 border-b border-border">
-                <div className="flex items-center gap-3 text-foreground">
-                  <MapPin className="h-6 w-6 text-accent" />
-                  <span className="font-semibold text-lg">Based in Madrid & London</span>
-                </div>
-                <div className="flex items-center gap-3 text-foreground">
-                  <Mountain className="h-6 w-6 text-accent" />
-                  <span className="font-semibold text-lg">AI-first solutions</span>
-                </div>
-                <div className="flex items-center gap-3 text-foreground">
-                  <Clock className="h-6 w-6 text-accent" />
-                  <span className="font-semibold text-lg">EU Timezone</span>
-                </div>
-              </div>
 
               {/* Main Contact Content */}
               <div className="text-center space-y-10 md:space-y-12">
-                <button
-                  className="mx-auto w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong hover:scale-105 transition-transform cursor-pointer"
+                <div
+                  className="flex items-center justify-center gap-8 cursor-pointer group"
                   onClick={handleServiceBooking}
-                  aria-label="Book a consultation via Calendly"
                 >
-                  <Calendar className="h-12 w-12 md:h-14 md:w-14 text-white" />
-                </button>
-
-                <div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                    Let's Discuss Your AI Needs
-                  </h3>
-                  <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed">
-                    Our expertise spans across three core service areas to accelerate your AI journey:
-                  </p>
+                  <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
+                    <Calendar className="h-12 w-12 md:h-14 md:w-14 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-2xl md:text-4xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
+                      Book a call now
+                    </p>
+                  </div>
                 </div>
 
                 {/* Services Grid */}
-                <div className="bg-gradient-alt rounded-2xl p-6 md:p-8 mb-8 md:mb-10 border border-border shadow-medium">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                <div className="bg-gradient-to-br from-background/50 to-muted/30 rounded-3xl p-8 md:p-10 mb-8 md:mb-10 border border-border/50 shadow-xl backdrop-blur-sm">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
                     {serviceOptions.map((service, index) => (
-                      <div key={index} className="bg-card rounded-xl p-6 md:p-8 border border-border hover:shadow-medium transition-all duration-300">
-                        <div className="flex items-start gap-4">
-                          <div className="w-4 h-4 bg-gradient-to-r from-accent to-accent/80 rounded-full shadow-sm mt-2 flex-shrink-0" />
-                          <div className="space-y-3">
-                            <h4 className="font-bold text-foreground text-lg md:text-xl leading-tight">{service.title}</h4>
-                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{service.description}</p>
+                      <div key={index} className="group bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/30 hover:border-accent/40 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:bg-card/90">
+                        <div className="flex flex-col gap-6">
+                          <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/60 rounded-2xl shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <div className="w-6 h-6 bg-white/90 rounded-full" />
+                          </div>
+                          <div className="space-y-4">
+                            <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight group-hover:text-accent transition-colors duration-300">{service.title}</h4>
+                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed group-hover:text-muted-foreground/80 transition-colors duration-300">{service.description}</p>
                           </div>
                         </div>
                       </div>
@@ -243,27 +227,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                  <Button
-                    variant="accent"
-                    size="lg"
-                    className="flex-1 shadow-strong text-lg md:text-xl py-6 md:py-8 px-8 md:px-10 bg-accent text-white hover:bg-accent/90 border-none"
-                    onClick={handleServiceBooking}
-                  >
-                    <Calendar className="h-6 w-6 mr-3 text-white" />
-                    Schedule via Calendly
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="flex-1 border-2 border-accent/30 hover:border-accent text-lg md:text-xl py-6 md:py-8 px-8 md:px-10 hover:bg-accent/10 text-foreground hover:text-accent transition-all duration-300"
-                    onClick={() => window.open(linkedinUrl, '_blank', 'noopener,noreferrer')}
-                  >
-                    <Linkedin className="h-6 w-6 mr-3" />
-                    Connect on LinkedIn
-                  </Button>
-                </div>
               </div>
             </Card>
           </div>
