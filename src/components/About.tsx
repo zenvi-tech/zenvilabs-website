@@ -80,9 +80,9 @@ const About = () => {
             </div>
 
             <div 
-              className="rounded-2xl shadow-strong h-96 bg-cover bg-center"
+              className="rounded-2xl shadow-strong h-96 bg-cover bg-center bg-top"
               style={{
-                backgroundImage: `url('${import.meta.env.BASE_URL}assets/zenvi-team.webp')`
+                backgroundImage: `url('${import.meta.env.BASE_URL}assets/zenvi-team.png')`
               }}
             />
           </div>
