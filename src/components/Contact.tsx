@@ -147,7 +147,7 @@ const Contact = () => {
 
                 <div>
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                    Let's Discuss Your AI Project
+                    Let's Discuss Your AI Needs
                   </h3>
                   <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed">
                     Our expertise spans across three core service areas to accelerate your AI journey:
