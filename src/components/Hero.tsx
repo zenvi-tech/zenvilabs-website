@@ -124,8 +124,12 @@ const Hero = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="text-[hsl(var(--zenvi-orange))]">Zenvi Labs</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
-                Our Intelligence, your Energy. We shape your business automation needs into AI-powered solutions.
+                <p className="text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-6 leading-tight">
+                Our Intelligence, Your Energy
+
+              </p>
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-4xl mx-auto font-medium italic drop-shadow-lg">
+                We shape your business automation needs into AI-powered solutions.
               </p>
             </div>
 
@@ -227,8 +231,11 @@ const Hero = () => {
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.3)'
                   }}>Zenvi Labs</span>
                 </h1>
-                <p className="text-2xl xl:text-3xl 2xl:text-4xl text-white/90 leading-relaxed">
-                  Our Intelligence, your Energy. We shape your business automation needs into AI-powered solutions.
+                <p className="text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-6 leading-tight">
+                  Our Intelligence, Your Energy
+                </p>
+                <p className="text-lg xl:text-xl text-white/90 mb-8 leading-relaxed font-medium italic drop-shadow-lg">
+                  We shape your business automation needs into AI-powered solutions.
                 </p>
               </div>
 
@@ -260,10 +267,6 @@ const Hero = () => {
                     Let's Build Something{" "}
                     <span className="text-[hsl(var(--zenvi-orange))]">Amazing Together</span>
                   </h2>
-                  <p className="text-lg xl:text-xl text-white/80 mb-8 leading-relaxed">
-                    Whether you're looking to rapidly prototype AI solutions, scale your ML initiatives,
-                    or build production-grade AI products, our team is ready to help.
-                  </p>
                 </div>
 
                 <div className="space-y-6">

@@ -34,7 +34,7 @@ function generateRSSFeeds() {
     const blogRSS = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giovanni Doni - Blog</title>
+    <title>Zenvi Labs - Blog</title>
     <description>Latest blog posts on machine learning, AI, and technology</description>
     <link>https://zenvilabs.com/</link>
     <language>en-us</language>
@@ -48,7 +48,7 @@ function generateRSSFeeds() {
       <guid>https://zenvilabs.com/blog/${article.slug}</guid>
       <pubDate>${new Date(article.date).toUTCString()}</pubDate>
       <category>${article.tags.join(', ')}</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>`).join('')}
   </channel>
 </rss>`;
@@ -57,7 +57,7 @@ function generateRSSFeeds() {
     const linkedinRSS = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giovanni Doni - LinkedIn Updates</title>
+    <title>Zenvi Labs - LinkedIn Updates</title>
     <description>Latest LinkedIn posts and updates</description>
     <link>https://zenvilabs.com/</link>
     <language>en-us</language>
@@ -71,7 +71,7 @@ function generateRSSFeeds() {
       <guid>https://zenvilabs.com/#linkedin-post-${post.index}</guid>
       <pubDate>${new Date().toUTCString()}</pubDate>
       <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>`).join('')}
   </channel>
 </rss>`;
@@ -85,7 +85,7 @@ function generateRSSFeeds() {
     const combinedRSS = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giovanni Doni - Blog, LinkedIn &amp; AI Research</title>
+    <title>Zenvi Labs - Blog, LinkedIn &amp; AI Research</title>
     <description>Latest blog posts, LinkedIn updates, and AI research highlights</description>
     <link>https://zenvilabs.com/</link>
     <language>en-us</language>
@@ -115,7 +115,7 @@ function generateRSSFeeds() {
         item.type === 'ai-research' ? item.category :
         'LinkedIn'
       }</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>`).join('')}
   </channel>
 </rss>`;

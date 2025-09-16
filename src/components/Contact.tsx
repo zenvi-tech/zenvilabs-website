@@ -110,10 +110,6 @@ const Contact = () => {
                 AI Needs
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Whether you're looking to rapidly prototype AI solutions, scale your ML initiatives,
-              or build production-grade AI products, our team is ready to help.
-            </p>
           </div>
 
           {/* Combined Contact Section */}

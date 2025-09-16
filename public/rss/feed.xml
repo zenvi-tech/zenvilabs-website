@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giovanni Doni - Blog, LinkedIn &amp; AI Research</title>
+    <title>Zenvi Labs - Blog, LinkedIn &amp; AI Research</title>
     <description>Latest blog posts, LinkedIn updates, and AI research highlights</description>
     <link>https://zenvilabs.com/</link>
     <language>en-us</language>
@@ -15,7 +15,7 @@
       <guid>https://zenvilabs.com/#linkedin-post-1</guid>
       <pubDate>Mon, 15 Sep 2025 16:46:53 GMT</pubDate>
       <category>LinkedIn</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>
     <item>
       <title>Fitting intelligence</title>
@@ -155,7 +155,7 @@ We don't need general artificial intelligence everywhere. What we need is an int
       <guid>https://zenvilabs.com/blog/fitting-intelligence</guid>
       <pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
       <category>SLMs, Agentic, Strategy</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>
   </channel>
 </rss>

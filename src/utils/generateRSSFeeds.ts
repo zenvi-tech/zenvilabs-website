@@ -147,7 +147,7 @@ const generateCombinedRSSFeed = (): string => {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title><![CDATA[Giovanni Doni - Blog & Updates]]></title>
+    <title><![CDATA[Zenvi Labs - Blog & Updates]]></title>
     <description><![CDATA[Latest blog articles and LinkedIn updates on machine learning, AI, and technology]]></description>
     <link>${baseUrl}</link>
     <atom:link href="${baseUrl}/rss/feed.xml" rel="self" type="application/rss+xml"/>
