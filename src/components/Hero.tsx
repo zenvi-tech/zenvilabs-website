@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Mountain, Calendar, FileText, Download } from "lucide-react";
+import { ArrowDown, Mountain, Calendar, FileText, Download, Linkedin } from "lucide-react";
 import { useState } from "react";
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -133,18 +133,30 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col gap-6 justify-center items-center">
               <Button variant="accent" size="lg" onClick={() => scrollToSection("experience")} className="shadow-strong text-lg px-8 py-4">
                 <FileText className="h-6 w-6" />
                 Our Work
               </Button>
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
-                <Calendar className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-left">
-                <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
-                  Let's Speak
-                </p>
+
+              <div className="flex items-center gap-4 justify-center">
+                <div className="flex items-center gap-4 cursor-pointer group" onClick={() => scrollToSection("contact")}>
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
+                    <Calendar className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
+                      Let's Speak
+                    </p>
+                  </div>
+                </div>
+
+                <Button
+                  onClick={() => window.open('https://www.linkedin.com/company/zenvi/', '_blank')}
+                  className="bg-[#0A66C2] hover:bg-[#004182] text-white w-16 h-16 rounded-full font-medium transition-colors shadow-medium flex items-center justify-center p-0"
+                >
+                  <Linkedin className="h-8 w-8 text-white" />
+                </Button>
               </div>
             </div>
             
@@ -210,16 +222,6 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <a
-                href="https://www.linkedin.com/company/zenvi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col justify-center items-center p-3 text-center text-white bg-[#0A66C2] w-[220px] h-10 rounded-2xl font-medium text-base hover:bg-[#004182] transition-colors shadow-medium"
-              >
-                Follow on LinkedIn
-              </a>
-            </div>
           </div>
 
           {/* Desktop Layout - 2 Columns */}
@@ -249,14 +251,6 @@ const Hero = () => {
                 >
                   Our Energy Platform
                 </Button>
-                <a
-                  href="https://www.linkedin.com/company/zenvi/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-center items-center px-6 py-3 text-center text-white bg-[#0A66C2] rounded-2xl font-medium text-lg hover:bg-[#004182] transition-colors shadow-medium"
-                >
-                  Follow us on LinkedIn
-                </a>
               </div>
             </div>
 
@@ -271,18 +265,27 @@ const Hero = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div
-                    className="flex items-center justify-center gap-4 cursor-pointer group w-full"
-                    onClick={() => scrollToSection("contact")}
-                  >
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
-                      <Calendar className="h-8 w-8 text-white" />
+                  <div className="flex items-center justify-center gap-4">
+                    <div
+                      className="flex items-center gap-4 cursor-pointer group"
+                      onClick={() => scrollToSection("contact")}
+                    >
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
+                        <Calendar className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
+                          Let's Speak
+                        </p>
+                      </div>
                     </div>
-                    <div className="text-left">
-                      <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
-                        Let's Speak
-                      </p>
-                    </div>
+
+                    <Button
+                      onClick={() => window.open('https://www.linkedin.com/company/zenvi/', '_blank')}
+                      className="bg-[#0A66C2] hover:bg-[#004182] text-white w-16 h-16 rounded-full font-medium transition-colors shadow-medium flex items-center justify-center p-0"
+                    >
+                      <Linkedin className="h-8 w-8 text-white" />
+                    </Button>
                   </div>
 
                   {/* PDF Download Section - Desktop */}

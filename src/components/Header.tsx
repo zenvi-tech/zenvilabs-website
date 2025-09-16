@@ -111,6 +111,7 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => window.open(import.meta.env.VITE_LINKEDIN_URL, "_blank")}
+                className="hover:bg-[#0A66C2] hover:text-white transition-colors"
               >
                 <Linkedin className="h-4 w-4" />
               </Button>
@@ -181,6 +182,7 @@ const Header = () => {
                   variant="ghost"
                   size="icon"
                   onClick={() => window.open(import.meta.env.VITE_LINKEDIN_URL, "_blank")}
+                  className="hover:bg-[#0A66C2] hover:text-white transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
                 </Button>

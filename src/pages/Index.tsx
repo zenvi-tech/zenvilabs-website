@@ -118,7 +118,7 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <div className="bg-background accordion-container">
+      <div className="bg-background accordion-container mt-12">
         <Accordion type="multiple" value={openAccordions} onValueChange={setOpenAccordions} className="w-full accordion-wrapper">
           <AccordionItem value="about" className="border-b border-border/50">
             <AccordionTrigger className="px-4 py-6 hover:no-underline [&[data-state=open]>svg]:rotate-180">
