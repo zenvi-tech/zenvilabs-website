@@ -18,98 +18,112 @@ export const PrivacyPolicy = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">Privacy Policy</CardTitle>
-            <p className="text-muted-foreground">Last updated: August 3, 2025</p>
+            <CardTitle className="text-3xl font-bold">PRIVACY POLICY</CardTitle>
+            <p className="text-muted-foreground">Our Privacy Policy is based on Regulation (EU) 2016/679 of the European Parliament and of the Council of April 27, 2016.</p>
           </CardHeader>
-          
+
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
+            <h2 className="text-xl font-semibold mt-6 mb-3">OUR CONTACT DETAILS</h2>
+
             <p>
-              This Privacy Policy explains how we collect and use data on this website. By giving your consent, you agree to the practices described below.
+              JIRO SIMPLIFIED BILLS SL (Zenvi).
             </p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-3">1. Data We Collect</h2>
-            
             <p>
-              <strong>Cookies & Similar Technologies:</strong> With your explicit consent, we use cookies to gather information about site usage and visitor behavior. No personal data beyond basic site metrics is stored.
-            </p>
-            
-            <p>
-              <strong>IP Addresses:</strong> We collect and analyze your IP address solely to estimate general geographic location (city, region, country). IP anonymization is applied immediately upon collection.
+              Príncipe de Vergara Street 94, staircase B, 8th Floor, Left.
             </p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-3">2. Purpose of Data Collection</h2>
-            
             <p>
-              <strong>Analytics:</strong> The information collected (cookies, anonymized IPs) is used only to generate aggregate reports on:
+              28006 Madrid.
             </p>
-            
+
+            <p>
+              Email: <a href="mailto:lopd@zenvi.es" className="text-primary hover:underline">lopd@zenvi.es</a>.
+            </p>
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">WHAT DO WE USE PERSONAL DATA FOR?</h2>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">To provide our services</h3>
+
+            <p>
+              As data controllers, we use our Users' personal identification, contact information, and economic and financial information to provide our services.
+            </p>
+
+            <p>
+              Our Users can view, analyze, and compare their bills/contracts with those of other utility providers (electricity, gas, telephone, etc.) and switch providers.
+            </p>
+
+            <p>
+              The invoices provided by Users to Zenvi, and all associated data (for example, amounts, dates, due dates, acceptance or observations, payments/collections, etc.) are stored on our platform, and storing such data is part of our services.
+            </p>
+
+            <p>
+              We also use bank details and other necessary information provided by the User to extract the information needed to provide our services.
+            </p>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">Send you commercial communications</h3>
+
+            <p>
+              As a customer, and pursuant to the legitimacy granted by Article 21 of Law 34/2002, of July 11, on information society services and electronic commerce, Zenvi may send you advertising about our products or services related to the service you have contracted. In any case, you may opt out of the processing of your data for promotional purposes by sending an email to <a href="mailto:lopd@zenvi.es" className="text-primary hover:underline">lopd@zenvi.es</a>.
+            </p>
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">ON WHAT LEGAL BASIS DO WE PROCESS PERSONAL DATA?</h2>
+
+            <p>
+              We process personal data provided that at least one of the following conditions is met:
+            </p>
+
             <ul className="list-disc ml-6 mb-4">
-              <li>Number of visitors and page views</li>
-              <li>Geographic distribution of site traffic</li>
-              <li>Browsing patterns and device types</li>
+              <li>That the interested party has given us their consent.</li>
+              <li>That is necessary to provide our services to the User.</li>
+              <li>That it is necessary for the fulfillment of our legal obligations.</li>
             </ul>
-            
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">TO WHICH POSSIBLE RECIPIENTS CAN WE COMMUNICATE PERSONAL DATA?</h2>
+
             <p>
-              No data is used for marketing, profiling, or sharing with third parties beyond the analytics provider under their standard data-processing agreement.
+              We only share our Users' personal data with the following recipients, as data processors:
             </p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-3">3. Google Analytics</h2>
-            
-            <p>
-              This site uses Google Analytics (GA4) to produce analytics reports. We have configured GA4 to:
-            </p>
-            
-            <p>
-              <strong>Anonymize IP Addresses:</strong> GA's anonymize_ip feature is enabled, masking the final octet of your IP address before storage.
-            </p>
-            
-            <p>
-              <strong>Limit Data Retention:</strong> Data retention in Google Analytics is set to the minimum term allowed (2 months).
-            </p>
-            
-            <p>
-              <strong>Data Processing Amendment:</strong> We have accepted Google's Data Processing Amendment to ensure all data handling meets EU/UKGDPR requirements.
-            </p>
-            
-            <p>
-              For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's Privacy Policy</a>.
-            </p>
-
-            <h2 className="text-xl font-semibold mt-6 mb-3">4. Consent</h2>
-            
-            <p>
-              Before any analytics cookies or scripts load, a consent banner will appear. No analytics cookies are placed without your affirmative opt‑in.
-            </p>
-            
-            <p>
-              You may withdraw or modify your consent at any time by clicking the "Cookie Settings" link in the footer.
-            </p>
-
-            <h2 className="text-xl font-semibold mt-6 mb-3">5. Your Rights</h2>
-            
-            <p>
-              Under EU/UK data protection laws, you have the right to:
-            </p>
-            
             <ul className="list-disc ml-6 mb-4">
-              <li>Access the data we hold about you</li>
-              <li>Correct any inaccurate data</li>
-              <li>Erase or restrict processing of your data</li>
-              <li>Opt Out of analytics tracking entirely (for example, by installing <a href="https://tools.google.com/dlpage/gaoptout/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's opt‑out browser add‑on</a>)</li>
+              <li>Our technology providers, for example, for the maintenance of our systems or for providing invoice reading services.</li>
+              <li>The collaborating entities that provide services to Zenvi Users.</li>
+              <li>Any administrative or judicial authority competent in the prevention of money laundering and terrorist financing in compliance with the Money Laundering Prevention Act, in order to prevent any related transactions.</li>
+              <li>Any other competent authority (judicial or administrative) provided for by law.</li>
             </ul>
-            
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">HOW LONG DO WE KEEP THE DATA?</h2>
+
             <p>
-              To exercise any of these rights, please contact us at: <a href="mailto:privacy@example.com" className="text-primary hover:underline">privacy@example.com</a>
+              The company will process personal data for the duration of the contractual relationship with the data subject or, where applicable, for as long as the data subject has validly given his or her consent. Once processing is completed, the data will be kept duly blocked for the time necessary to address potential legal liabilities arising from the processing, making it available only to the competent public authorities, judges, and courts.
             </p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-3">6. Changes to This Policy</h2>
-            
+            <h2 className="text-xl font-semibold mt-6 mb-3">WHAT SECURITY MEASURES DO WE APPLY?</h2>
+
             <p>
-              We may update this policy occasionally. When significant changes occur, we will post a prominent notice on the site and update the "Last updated" date above.
+              We implement technical and organizational measures to ensure an adequate level of security in accordance with applicable regulations.
             </p>
-            
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">WHAT SECURITY MEASURES DO WE APPLY FOR THE USE OF ARTIFICIAL INTELLIGENCE?</h2>
+
             <p>
-              If you have questions about this policy, please reach out via links provided on the main site.
+              We may use artificial intelligence technology, such as chatbots supported by powerful language models, as part of our operations. In doing so, we maintain full control over your data and guarantee that it will not be shared with third parties for the purpose of training AI models.
+            </p>
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">WHAT RIGHTS DO YOU HAVE AND HOW TO EXERCISE THEM?</h2>
+
+            <p>
+              You may request access to your personal data, its rectification or deletion, portability, or restriction of its processing, or you may object to its processing, by contacting Zenvi (using the contact information provided at the beginning of this Privacy Policy).
+            </p>
+
+            <p>
+              Regarding consent-based processing, you may withdraw your consent at any time. You also have the right to lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.aepd.es</a>).
+            </p>
+
+            <h2 className="text-xl font-semibold mt-6 mb-3">REVIEW AND UPDATE</h2>
+
+            <p>
+              This Privacy Policy is reviewed and updated annually.
             </p>
           </CardContent>
         </Card>

@@ -13,7 +13,8 @@ const Footer = () => {
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
+    { name: "Privacy Policy", href: "/privacy" }
   ];
 
   const socialLinks = [
@@ -21,10 +22,14 @@ const Footer = () => {
     { icon: Mail, href: `mailto:${emailAddress}`, label: "Email" }
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId.replace("#", ""));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleQuickLinkClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.getElementById(href.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = href;
     }
   };
 
@@ -41,9 +46,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            {/* Brand */}
-            <div className="lg:col-span-2 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            {/* Brand - Full width on all screens */}
+            <div className="col-span-1 md:col-span-2 lg:col-span-2 space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="h-8 w-8 rounded bg-[hsl(var(--zenvi-orange))] flex items-center justify-center">
                   <span className="text-white font-bold text-sm">ZL</span>
@@ -66,65 +71,83 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <nav className="space-y-2">
-                {quickLinks.map((link, index) => (
+            {/* Quick Links and Connect - side by side on mobile, separate on desktop */}
+            <div className="col-span-1 grid grid-cols-2 gap-8 md:contents">
+              {/* Quick Links */}
+              <div className="md:col-span-1">
+                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <nav className="space-y-2">
                   <button
-                    key={index}
-                    onClick={() => scrollToSection(link.href)}
+                    onClick={() => handleQuickLinkClick("#about")}
                     className="block text-white/80 hover:text-accent transition-colors"
                   >
-                    {link.name}
+                    About
                   </button>
-                ))}
-                <button
-                  onClick={() => scrollToSection("#team")}
-                  className="block text-white/80 hover:text-accent transition-colors"
-                >
-                  Team
-                </button>
-              </nav>
-            </div>
+                  <button
+                    onClick={() => handleQuickLinkClick("#experience")}
+                    className="block text-white/80 hover:text-accent transition-colors"
+                  >
+                    Experience
+                  </button>
+                  <button
+                    onClick={() => handleQuickLinkClick("#team")}
+                    className="block text-white/80 hover:text-accent transition-colors"
+                  >
+                    Team
+                  </button>
+                  <button
+                    onClick={() => handleQuickLinkClick("#contact")}
+                    className="block text-white/80 hover:text-accent transition-colors"
+                  >
+                    Contact
+                  </button>
+                  <button
+                    onClick={() => handleQuickLinkClick("/privacy")}
+                    className="block text-white/80 hover:text-accent transition-colors"
+                  >
+                    Privacy Policy
+                  </button>
+                </nav>
+              </div>
 
-            {/* Connect */}
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <div className="flex flex-col space-y-4">
-                {socialLinks.map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    size="sm"
-                    className="justify-start p-0 h-auto text-white/80 hover:text-accent w-fit"
-                    onClick={() => handleSocialClick(social.href)}
-                  >
-                    <social.icon className="h-4 w-4 mr-2" />
-                    {social.label}
-                  </Button>
-                ))}
-                
-                {/* RSS Feed */}
-                <a 
-                  href="/rss/feed.xml" 
-                  target="_blank"
-                  className="flex items-center text-white/80 hover:text-accent transition-colors text-sm"
-                >
-                  <Code className="h-4 w-4 mr-2" />
-                  RSS Feed
-                </a>
-                
-                {/* LinkedIn Follow Button */}
-                <div className="pt-2">
+              {/* Connect */}
+              <div className="md:col-span-1">
+                <h4 className="font-semibold mb-4">Connect</h4>
+                <div className="flex flex-col space-y-4">
+                  {socialLinks.map((social, index) => (
+                    <Button
+                      key={index}
+                      variant="ghost"
+                      size="sm"
+                      className="justify-start p-0 h-auto text-white/80 hover:text-accent w-fit"
+                      onClick={() => handleSocialClick(social.href)}
+                    >
+                      <social.icon className="h-4 w-4 mr-2" />
+                      {social.label}
+                    </Button>
+                  ))}
+
+                  {/* RSS Feed */}
                   <a
-                    href="https://www.linkedin.com/company/zenvi-labs"
+                    href="/rss/feed.xml"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-center text-white bg-[#0A66C2] w-[200px] h-10 leading-10 rounded-2xl font-medium text-sm hover:bg-[#004182] transition-colors"
+                    className="flex items-center text-white/80 hover:text-accent transition-colors text-sm"
                   >
-                    Follow Zenvi Labs
+                    <Code className="h-4 w-4 mr-2" />
+                    RSS Feed
                   </a>
+
+                  {/* LinkedIn Follow Button */}
+                  <div className="pt-2">
+                    <a
+                      href="https://www.linkedin.com/company/zenvi-labs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-center text-white bg-[#0A66C2] w-[200px] h-10 leading-10 rounded-2xl font-medium text-sm hover:bg-[#004182] transition-colors"
+                    >
+                      Follow Zenvi Labs
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,21 +159,9 @@ const Footer = () => {
               <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-white/60 text-sm text-center">
                 <span>© {currentYear} Zenvi Labs.</span>
                 <div className="flex items-center gap-1">
-                  <span>Built with</span>
-                  <Heart className="h-4 w-4 text-red-400" />
-                  <span>and React in Madrid & London</span>
+                  <span>Our Intelligence, Your Energy</span>
                 </div>
               </div>
-
-              <div className="flex flex-row items-center gap-6 text-sm text-white/60 text-center">
-                <span>AI-powered solutions</span>
-                <span>•</span>
-                <a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
-              </div>
-
-              <p className="text-white/60 text-sm italic text-center">
-                "Harnessing the power of AI."
-              </p>
             </div>
           </div>
         </div>
