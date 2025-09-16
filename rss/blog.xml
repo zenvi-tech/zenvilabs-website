@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giovanni Doni - Blog</title>
+    <title>Zenvi Labs - Blog</title>
     <description>Latest blog posts on machine learning, AI, and technology</description>
     <link>https://zenvilabs.com/</link>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Sep 2025 11:23:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 11:49:48 GMT</lastBuildDate>
     <atom:link href="https://zenvilabs.com/rss/blog.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -146,7 +146,7 @@ We don't need general artificial intelligence everywhere. What we need is an int
       <guid>https://zenvilabs.com/blog/fitting-intelligence</guid>
       <pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
       <category>SLMs, Agentic, Strategy</category>
-      <author>Giovanni Doni</author>
+      <author>Zenvi Labs</author>
     </item>
   </channel>
 </rss>
