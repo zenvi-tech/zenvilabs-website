@@ -133,6 +133,21 @@ const Hero = () => {
               </p>
             </div>
 
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button variant="accent" size="lg" onClick={() => scrollToSection("experience")} className="shadow-strong text-lg px-8 py-4">
+                <FileText className="h-6 w-6" />
+                Our Work
+              </Button>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong group-hover:scale-105 transition-all duration-300 group-hover:shadow-xl">
+                <Calendar className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-lg md:text-2xl font-bold text-[hsl(var(--zenvi-orange))] group-hover:text-[hsl(var(--zenvi-orange))]/80 transition-colors duration-300">
+                  Let's Speak
+                </p>
+              </div>
+            </div>
+            
             {/* PDF Download Section - Mobile */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-strong">
               <div className="text-center space-y-4">
@@ -193,17 +208,6 @@ const Hero = () => {
                   </form>
                 )}
               </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button variant="accent" size="lg" onClick={() => scrollToSection("experience")} className="shadow-strong text-lg px-8 py-4">
-                <FileText className="h-6 w-6" />
-                Our Work
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm text-lg px-8 py-4" onClick={() => scrollToSection("contact")}>
-                <Calendar className="h-6 w-6" />
-                Let's Chat
-              </Button>
             </div>
 
             <div className="flex justify-center">
