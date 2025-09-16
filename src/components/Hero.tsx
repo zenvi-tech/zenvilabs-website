@@ -136,12 +136,9 @@ const Hero = () => {
             {/* PDF Download Section - Mobile */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-strong">
               <div className="text-center space-y-4">
-                <div className="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-strong">
-                  <FileText className="h-6 w-6" />
-                </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">
-                    Download Our Company Overview
+                    More about ZenviLabs?
                   </h3>
                   <p className="text-sm text-white/80 mb-4">
                     Get detailed insights into our AI solutions and approach.
@@ -201,7 +198,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button variant="accent" size="lg" onClick={() => scrollToSection("experience")} className="shadow-strong text-lg px-8 py-4">
                 <FileText className="h-6 w-6" />
-                View Our Work
+                Our Work
               </Button>
               <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm text-lg px-8 py-4" onClick={() => scrollToSection("contact")}>
                 <Calendar className="h-6 w-6" />
@@ -287,9 +284,6 @@ const Hero = () => {
                   {/* PDF Download Section - Desktop */}
                   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                     <div className="text-center space-y-4">
-                      <div className="w-10 h-10 mx-auto rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center">
-                        <FileText className="h-5 w-5" />
-                      </div>
                       <div>
                         <h3 className="text-lg font-bold text-white mb-2">
                           Download Company Overview
