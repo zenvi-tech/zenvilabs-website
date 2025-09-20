@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://zenvilabs.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2025-09-01</lastmod>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://zenvilabs.com/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-09-01</lastmod>
+  </url>
+
+  <!-- Blog posts will be dynamically added here -->
+  <!-- This should ideally be generated dynamically based on actual blog posts -->
+</urlset>

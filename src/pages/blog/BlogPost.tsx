@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import blogArticles from '@/data/blog-articles.json';
+import SEOHead from '@/components/SEOHead';
 
 
 interface BlogArticle {
@@ -97,12 +98,24 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <Link to="/#blog" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-8 transition-colors">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Blog
-        </Link>
+    <>
+      <SEOHead
+        title={`${article.title} | ZenviLabs Blog`}
+        description={article.excerpt}
+        ogTitle={article.title}
+        ogDescription={article.excerpt}
+        ogType="article"
+        canonicalUrl={`https://zenvilabs.com/blog/${article.slug}`}
+        publishedDate={article.date}
+        articleTags={article.tags}
+        keywords={`${article.tags.join(', ')}, AI, machine learning, energy sector`}
+      />
+      <div className="min-h-screen bg-background py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link to="/#blog" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-8 transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
 
         <Card className="bg-card backdrop-blur-sm border-border p-8">
           <div className="mb-6">
@@ -163,6 +176,7 @@ const BlogPost = () => {
         </Card>
       </div>
     </div>
+    </>
   );
 };
 

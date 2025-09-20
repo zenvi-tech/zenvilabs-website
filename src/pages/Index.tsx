@@ -7,6 +7,7 @@ import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIResearchDigest from "@/components/AIResearchDigest";
+import SEOHead from "@/components/SEOHead";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ChevronDown, User, Briefcase, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -100,23 +101,32 @@ const Index = () => {
   if (!isMobile) {
     console.log('Desktop mode - not rendering accordion');
     return (
-      <div className="min-h-screen">
-        <Header />
-        <Hero />
-        <About />
-        <Experience />
+      <>
+        <SEOHead
+          canonicalUrl="https://zenvilabs.com/"
+        />
+        <div className="min-h-screen">
+          <Header />
+          <Hero />
+          <About />
+          <Experience />
         <Team />
         <Blog />
         <Contact />
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
+    <>
+      <SEOHead
+        canonicalUrl="https://zenvilabs.com/"
+      />
+      <div className="min-h-screen">
+        <Header />
+        <Hero />
       
       <div className="bg-background accordion-container mt-12">
         <Accordion type="multiple" value={openAccordions} onValueChange={setOpenAccordions} className="w-full accordion-wrapper">
@@ -182,8 +192,9 @@ const Index = () => {
         </Accordion>
       </div>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
