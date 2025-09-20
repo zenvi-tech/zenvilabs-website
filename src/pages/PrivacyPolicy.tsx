@@ -2,10 +2,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 
 export const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEOHead
+        title="Privacy Policy | ZenviLabs"
+        description="Learn about how ZenviLabs handles your data and protects your privacy. Our comprehensive privacy policy explains our data collection and usage practices."
+        canonicalUrl="https://zenvilabs.com/privacy"
+      />
+      <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="mb-6">
           <Link to="/">
@@ -129,6 +136,7 @@ export const PrivacyPolicy = () => {
         </Card>
       </div>
     </div>
+    </>
   );
 };
 
